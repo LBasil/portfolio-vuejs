@@ -4,18 +4,17 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import Vue from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
-@Options({
+export default {
   components: {
     HelloWorld,
   },
-})
-export default class App extends Vue {}
+};
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
