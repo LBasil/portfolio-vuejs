@@ -34,6 +34,20 @@
         </div>
       </div>
     </nav>
+
+    <nav aria-label="breadcrumb" class="bg-light">
+      <div class="container">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <RouterLink to="/">Accueil</RouterLink>
+          </li>
+          <li class="breadcrumb-item">
+            <RouterLink to="/projets">Projets</RouterLink>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Projet 1</li>
+        </ol>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -41,6 +55,9 @@
 import { RouterLink } from "vue-router";
 export default {
   name: "HeaderComponent",
+  components: {
+    RouterLink,
+  },
 };
 </script>
 
@@ -52,5 +69,29 @@ header {
 .navbar-brand img {
   height: 30px;
   margin-right: 10px;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  display: inline-block;
+  padding: 0 0.5rem;
+  color: #6c757d;
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  color: #007bff;
+}
+
+.breadcrumb-item a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #343a40;
 }
 </style>
