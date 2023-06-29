@@ -22,22 +22,72 @@
           <ul>
             <li>HTML5 / CSS3</li>
             <li>JavaScript / Vue.js</li>
-            <li>Bootstrap / Tailwind CSS</li>
-            <li>Node.js / Express.js</li>
-            <li>Bases de données SQL / NoSQL</li>
+            <li>Ant Design</li>
+            <li>Jest / Puppeteer</li>
+            <li>Java / Spring boot</li>
           </ul>
+        </div>
+      </div>
+
+      <div class="row mt-4 align-items-stretch">
+        <div class="col-md-6 d-flex">
+          <div class="card">
+            <img
+              src="../assets/projets.png"
+              class="card-img-top img-fluid"
+              alt="Image 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mes projets</h5>
+              <p class="card-text">
+                Venez découvrir mes différents projets sous VueJS ou bien Spring
+              </p>
+              <router-link to="/projets" class="btn btn-primary"
+                >Découvrir les projets
+              </router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="card">
+            <img
+              src="../assets/contact.png"
+              class="card-img-top img-fluid"
+              alt="Image 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Me contacter</h5>
+              <p class="card-text">
+                Vous êtes une entreprise située dans la MEL ? Découvrez comment
+                me contacter
+              </p>
+              <router-link to="/contact" class="btn btn-primary"
+                >Me contacter</router-link
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "AccueilComponent",
 };
 </script>
 
 <style scoped>
-/* Ajoutez des styles personnalisés ici */
+#accueil {
+  padding: 50px 0;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  object-fit: fill;
+}
 </style>
