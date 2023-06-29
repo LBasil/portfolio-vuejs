@@ -2,9 +2,9 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <RouterLink class="navbar-brand" to="/">
+        <router-link class="navbar-brand" to="/">
           <img src="chemin_vers_votre_logo" alt="Logo" />
-        </RouterLink>
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -22,13 +22,13 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/accueil">Accueil</RouterLink>
+              <router-link class="nav-link" to="/accueil">Accueil</router-link>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/projets">Projets</RouterLink>
+              <router-link class="nav-link" to="/projets">Projets</router-link>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/contact">Contact</RouterLink>
+              <router-link class="nav-link" to="/contact">Contact</router-link>
             </li>
           </ul>
         </div>
@@ -38,10 +38,10 @@
 </template>
 
 <script lang="ts">
-import { RouterLink } from "vue-router";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "HeaderComponent",
-};
+});
 </script>
 
 <style scoped>
