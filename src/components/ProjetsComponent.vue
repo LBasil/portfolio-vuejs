@@ -4,18 +4,26 @@
       <h2 class="text-center">Mes Projets</h2>
       <div class="row">
         <div v-for="projet in projets" :key="projet.id" class="col-md-6">
-          <div class="card mb-4">
-            <div class="project-image">
-              <img
-                :src="projet.image"
-                class="card-img-top"
-                :alt="projet.titre"
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">{{ projet.titre }}</h5>
-              <p class="card-text">{{ projet.description }}</p>
-              <a :href="projet.lien" class="btn btn-primary">Voir le projet</a>
+          <div class="card">
+            <div class="card-inner">
+              <div class="project-image">
+                <img
+                  :src="projet.image"
+                  class="card-img-top"
+                  :alt="projet.titre"
+                />
+                <div v-if="projet.privacy" class="privacy-indicator">
+                  Confidentiel
+                </div>
+                <div v-else class="noprivacy-indicator">Non confidentiel</div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ projet.titre }}</h5>
+                <p class="card-text">{{ projet.description }}</p>
+                <a :href="projet.lien" class="btn btn-primary"
+                  >Voir le projet</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -24,7 +32,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import projet_misyl from "@/assets/projet_misyl.png";
+import projet_spring from "@/assets/spring_boot.png";
 export default {
   name: "ProjetsComponent",
   data() {
@@ -32,24 +42,27 @@ export default {
       projets: [
         {
           id: 1,
-          titre: "Projet 1",
+          titre: "Participation à la création d'un framework de développement",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          image: "chemin_vers_image_projet_1",
+            "Stage de fin de Licence Profesionelle DA2I effectué chez Misyl Services du 03/04 au 31/07",
+          privacy: true,
+          image: projet_misyl,
           lien: "#",
         },
         {
           id: 2,
-          titre: "Projet 2",
-          description: "Nullam condimentum consequat ex sed elementum.",
-          image: "chemin_vers_image_projet_2",
+          titre: "Tricount DA2I",
+          description: "Projet réalisé durant ma formation DA2I",
+          privacy: false,
+          image: projet_spring,
           lien: "#",
         },
         {
           id: 3,
-          titre: "Projet 3",
-          description: "Nullam condimentum consequat ex sed elementum.",
-          image: "chemin_vers_image_projet_2",
+          titre: "Gestion d'agenda inspiré de Doctolib",
+          description: "Projet réalisé durant ma formation DA2I",
+          privacy: false,
+          image: projet_spring,
           lien: "#",
         },
         // Ajoutez d'autres projets ici
@@ -88,14 +101,19 @@ export default {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card-body {
+  flex-grow: 1;
   padding: 20px;
 }
 
@@ -117,5 +135,31 @@ export default {
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+.privacy-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.noprivacy-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #29a20d;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 1;
 }
 </style>
