@@ -8,6 +8,9 @@ import "bootstrap/dist/css/bootstrap.css"; // Ensuite, importez le fichier CSS d
 import AccueilComponent from "./components/AccueilComponent.vue";
 import ProjetsComponent from "./components/ProjetsComponent.vue";
 import ContactComponent from "./components/ContactComponent.vue";
+import MisylProject from "./views/MisylProject.vue";
+import PandagendaProject from "./views/PandagendaProject.vue";
+import TricountProject from "./views/TricountProject.vue";
 
 const app = createApp(App);
 
@@ -16,6 +19,9 @@ const routes = [
   { path: "/accueil", component: AccueilComponent },
   { path: "/projets", component: ProjetsComponent },
   { path: "/contact", component: ContactComponent },
+  { path: "/misyl-project", component: MisylProject },
+  { path: "/doctolib-project", component: PandagendaProject },
+  { path: "/tricount-project", component: TricountProject },
 ];
 
 const router = createRouter({

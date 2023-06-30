@@ -47,7 +47,7 @@ export default {
             "Stage de fin de Licence Profesionelle DA2I effectué chez Misyl Services du 03/04 au 31/07",
           privacy: true,
           image: projet_misyl,
-          lien: "#",
+          lien: "/misyl-project",
         },
         {
           id: 2,
@@ -56,7 +56,7 @@ export default {
             "Projet réalisé durant ma formation DA2I. L'objectif est de créer un système de gestion de comptes entre amis similaire à Tricount, idéal pour organiser des séjours ou gérer les dépenses entre colocataires.",
           privacy: false,
           image: projet_spring,
-          lien: "#",
+          lien: "/tricount-project",
         },
         {
           id: 3,
@@ -65,7 +65,7 @@ export default {
             "Projet réalisé durant ma formation DA2I. Ce projet vise à développer un site web de gestion de rendez-vous multi-utilisateurs, à l'instar de prendreunrendezvous ou Doctolib. Il s'agit d'un framework général permettant d'adapter le site à différentes situations en définissant des paramètres spécifiques.",
           privacy: false,
           image: projet_spring,
-          lien: "#",
+          lien: "/doctolib-project",
         },
         // Ajoutez d'autres projets ici
       ],
