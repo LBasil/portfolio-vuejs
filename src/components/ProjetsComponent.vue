@@ -34,7 +34,7 @@
 
 <script lang="ts">
 import projet_misyl from "@/assets/projet_misyl.png";
-import projet_spring from "@/assets/spring_boot.png";
+import projet_spring from "@/assets/projet_tricount.png";
 export default {
   name: "ProjetsComponent",
   data() {
@@ -51,8 +51,9 @@ export default {
         },
         {
           id: 2,
-          titre: "Tricount DA2I",
-          description: "Projet réalisé durant ma formation DA2I",
+          titre: "Projet web - 'THE DA2I TRICOUNT'",
+          description:
+            "Projet réalisé durant ma formation DA2I. L'objectif est de créer un système de gestion de comptes entre amis similaire à Tricount, idéal pour organiser des séjours ou gérer les dépenses entre colocataires.",
           privacy: false,
           image: projet_spring,
           lien: "#",
@@ -60,7 +61,8 @@ export default {
         {
           id: 3,
           titre: "Gestion d'agenda inspiré de Doctolib",
-          description: "Projet réalisé durant ma formation DA2I",
+          description:
+            "Projet réalisé durant ma formation DA2I. Ce projet vise à développer un site web de gestion de rendez-vous multi-utilisateurs, à l'instar de prendreunrendezvous ou Doctolib. Il s'agit d'un framework général permettant d'adapter le site à différentes situations en définissant des paramètres spécifiques.",
           privacy: false,
           image: projet_spring,
           lien: "#",
@@ -76,7 +78,7 @@ export default {
 .project-image {
   position: relative;
   overflow: hidden;
-  height: 300px;
+  object-fit: cover;
 }
 
 .project-image::before {
