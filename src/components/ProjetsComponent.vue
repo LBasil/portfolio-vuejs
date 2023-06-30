@@ -33,7 +33,11 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
 import projet_misyl from "@/assets/projet_misyl.png";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
 import projet_spring from "@/assets/projet_tricount.png";
 export default {
   name: "ProjetsComponent",
