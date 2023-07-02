@@ -3,7 +3,7 @@
     <h2 class="text-center">Projet CONFIDENTIEL</h2>
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <div class="card mb-4">
+        <div class="card mb-4 animated-card">
           <div class="card-body">
             <h5 class="card-title animated-title" data-animation="slide-up">
               Titre du Projet
@@ -110,6 +110,8 @@ export default {
   font-size: 24px;
   margin-bottom: 10px;
   transition: color 0.3s;
+  position: relative;
+  display: inline-block;
 }
 
 .card-title:hover,
@@ -165,5 +167,52 @@ export default {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.animated-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  z-index: -1;
+  transition: transform 0.5s;
+}
+
+.animated-card:hover::before {
+  transform: translateX(100%);
+}
+
+.animated-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #007bff;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.animated-title:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.2);
+}
+
+.project-info:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.2);
 }
 </style>
