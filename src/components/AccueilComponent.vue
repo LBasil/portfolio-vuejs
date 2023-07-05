@@ -8,14 +8,14 @@
           <h2 class="section-title">À propos de moi</h2>
           <div class="section-content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vitae lorem ut metus luctus semper. Nullam condimentum consequat
-              ex sed elementum.
+              Basil L'hôte, 21 ans d'expériences dans le domaine du jeu-vidéo,
+              la première passion qui m'a mené dans le monde du développement.
             </p>
             <p>
-              Ut dapibus scelerisque augue, a condimentum enim tempor at. Mauris
-              interdum, ligula ac ultricies cursus, tellus felis congue odio,
-              non ultrices urna nisi non nisi.
+              Vous pouvez retrouver ci-dessous mes différents projets, réalisés
+              soit dans le cadre de mes études, soit dans un cadre personnel. En
+              vous souhaitant une agréable visite et en espérant que vous aurez
+              envie de me recontacter !
             </p>
           </div>
         </div>
