@@ -108,15 +108,15 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   mounted() {
     this.animateTitles();
   },
   methods: {
     animateTitles() {
-      const animatedTitles: any = document.querySelectorAll(".animated-title");
-      animatedTitles.forEach((title: any) => {
+      const animatedTitles = document.querySelectorAll(".animated-title");
+      animatedTitles.forEach((title) => {
         const animation = title.getAttribute("data-animation");
         title.classList.add(animation);
       });
