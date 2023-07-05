@@ -77,7 +77,6 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="btn btn-primary">Voir le projet</a>
             <div class="confidential-label">Confidentiel</div>
           </div>
         </div>
