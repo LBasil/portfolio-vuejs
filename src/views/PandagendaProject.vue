@@ -1,25 +1,22 @@
 <template>
   <div class="container">
-    <h2 class="text-center">Stage de fin d'études DA2I</h2>
+    <h2 class="text-center">Premier projet DA2I</h2>
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card mb-4 animated-card">
           <div class="card-body">
             <h5 class="card-title animated-title" data-animation="slide-up">
-              Participation à la création d'un framework de développement
+              Systèmes de gestion de rendez-vous en ligne
             </h5>
             <p class="card-text">
-              Depuis le 3 avril, j'ai eu l'opportunité de réaliser un stage au
-              sein de l'entreprise Misyl Services, située à Villeneuve d'Ascq.
-              Pendant cette période, j'ai pu découvrir et travailler avec un
-              framework de programmation appelé VueJS, dans le but de démarrer
-              une nouvelle version de l'ERP Orion, utilisé par l'entreprise et
-              dans le futur, le transformer en Framework. Je suis donc parti
-              d'un Framework et d'une librairie de design que je ne connaissais
-              pas, pour finalement fournir une version de démo fonctionnelle,
-              possédant son propre interpréteur XML afin d'afficher
-              dynamiquement des «Vue» qui stockées sous ce format dans une base
-              de données.
+              Dans le cadre de ma formation, j'ai développé un site web de
+              gestion de rendez-vous multi-utilisateurs qui permet aux
+              utilisateurs de consulter les créneaux disponibles et de saisir
+              leurs rendez-vous, en respectant les contraintes spécifiques à
+              chaque type de rendez-vous. Le site offre une flexibilité en
+              termes de paramétrage et peut être adapté à différentes
+              situations, permettant la gestion de plannings avec des
+              contraintes variées.
             </p>
             <div class="project-details">
               <div class="row">
@@ -31,9 +28,9 @@
                     Compétences requises
                   </h6>
                   <ul class="list-group">
-                    <li class="list-group-item">Travail d'équipe</li>
                     <li class="list-group-item">Autonomie</li>
-                    <li class="list-group-item">Force de proposition</li>
+                    <li class="list-group-item">Gestion de projet</li>
+                    <li class="list-group-item">Rigueur</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
@@ -44,9 +41,9 @@
                     Technologies utilisées
                   </h6>
                   <ul class="list-group">
-                    <li class="list-group-item">VueJS</li>
-                    <li class="list-group-item">Typescript</li>
-                    <li class="list-group-item">Ant Design</li>
+                    <li class="list-group-item">Spring Boot</li>
+                    <li class="list-group-item">Boostrap</li>
+                    <li class="list-group-item">H2</li>
                   </ul>
                 </div>
               </div>
@@ -59,8 +56,7 @@
                     Temps investi
                   </h6>
                   <ul class="list-group">
-                    <li class="list-group-item">En cours de développement</li>
-                    <li class="list-group-item">Temps estimé 560h</li>
+                    <li class="list-group-item">6 semaines</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
@@ -70,38 +66,27 @@
                   >
                     Nombre de personnes impliquées
                   </h6>
-                  <p>
-                    4 personnes (chiffre variant entre 1 et 4 suivant la
-                    période)
-                  </p>
+                  <p>1 personne</p>
                 </div>
               </div>
             </div>
-            <div class="confidential-label">Confidentiel</div>
+            <div class="no-confidential-label">Non confidentiel</div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="knowledge-exchange">
-      <h3 class="text-center">Échange de connaissances</h3>
+      <h3 class="text-center">Connaissances acquises</h3>
       <div class="knowledge-exchange-content">
         <p>
-          Mon expérience au sein de cette entreprise m'a permis d'acquérir de
-          précieuses connaissances tant sur le plan technique que sur le plan
-          humain. J'ai pu approfondir mes compétences en programmation, mais
-          j'ai également appris des aspects essentiels du savoir-être et du
-          savoir-vivre en milieu professionnel.
-        </p>
-      </div>
-      <div class="knowledge-exchange-content">
-        <p>
-          En échange, j'ai apporté à l'entreprise des compétences techniques
-          spécifiques, une base solide pour le projet et du code réutilisable.
-          Mon travail de recherche et d'exploration technique a permis d'élargir
-          les possibilités du projet, la réutilisabilité du code et la
-          documentation ont contribué à une meilleure efficacité et à une
-          maintenance simplifiée.
+          J'ai grâce à ce projet renforcé mes connaissances en lien avec
+          l'utilisation du framework Spring Boot. C'était le premier vrai projet
+          complexe que je mettais en place sous Spring Boot avec l'utilisation
+          de JSP. J'ai ainsi pu avoir une première expérience ce qui m'a permis
+          de fournir un deuxième projet encore plus complet et performant que
+          celui-ci. Le fait d'être seul pour le réalisé a augmenter ma confiance
+          en moi et la confiance que j'ai en ma capacité de fournir un code
+          répondant aux besoins de l'utilisateur.
         </p>
       </div>
     </div>
@@ -171,12 +156,12 @@ export default {
   margin-bottom: 5px;
 }
 
-.confidential-label {
+.no-confidential-label {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  background-color: #dc3545;
+  background-color: #29a20d;
   color: white;
   font-weight: bold;
   border-radius: 5px;

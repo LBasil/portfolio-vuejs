@@ -64,7 +64,7 @@ export default {
         },
         {
           id: 3,
-          titre: "Gestion d'agenda inspiré de Doctolib",
+          titre: "Systèmes de gestion de rendez-vous en ligne",
           description:
             "Projet réalisé durant ma formation DA2I. Ce projet vise à développer un site web de gestion de rendez-vous multi-utilisateurs, à l'instar de prendreunrendezvous ou Doctolib. Il s'agit d'un framework général permettant d'adapter le site à différentes situations en définissant des paramètres spécifiques.",
           privacy: false,

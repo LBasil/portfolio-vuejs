@@ -1,25 +1,21 @@
 <template>
   <div class="container">
-    <h2 class="text-center">Stage de fin d'études DA2I</h2>
+    <h2 class="text-center">Deuxième projet DA2I</h2>
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card mb-4 animated-card">
           <div class="card-body">
             <h5 class="card-title animated-title" data-animation="slide-up">
-              Participation à la création d'un framework de développement
+              Projet web - 'THE DA2I TRICOUNT'
             </h5>
             <p class="card-text">
-              Depuis le 3 avril, j'ai eu l'opportunité de réaliser un stage au
-              sein de l'entreprise Misyl Services, située à Villeneuve d'Ascq.
-              Pendant cette période, j'ai pu découvrir et travailler avec un
-              framework de programmation appelé VueJS, dans le but de démarrer
-              une nouvelle version de l'ERP Orion, utilisé par l'entreprise et
-              dans le futur, le transformer en Framework. Je suis donc parti
-              d'un Framework et d'une librairie de design que je ne connaissais
-              pas, pour finalement fournir une version de démo fonctionnelle,
-              possédant son propre interpréteur XML afin d'afficher
-              dynamiquement des «Vue» qui stockées sous ce format dans une base
-              de données.
+              J'ai du, dans le cadre de ma formation, développer une application
+              de gestion de comptes entre amis qui permet d'enregistrer les
+              dépenses, de calculer les dépenses cumulées, de minimiser les
+              transactions nécessaires pour équilibrer les comptes et de gérer
+              les événements de manière flexible. Les utilisateurs peuvent créer
+              des comptes, rejoindre des événements en tant que participants et
+              accéder à l'historique des événements passés.
             </p>
             <div class="project-details">
               <div class="row">
@@ -33,7 +29,7 @@
                   <ul class="list-group">
                     <li class="list-group-item">Travail d'équipe</li>
                     <li class="list-group-item">Autonomie</li>
-                    <li class="list-group-item">Force de proposition</li>
+                    <li class="list-group-item">Gestion de projet</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
@@ -44,9 +40,9 @@
                     Technologies utilisées
                   </h6>
                   <ul class="list-group">
-                    <li class="list-group-item">VueJS</li>
-                    <li class="list-group-item">Typescript</li>
-                    <li class="list-group-item">Ant Design</li>
+                    <li class="list-group-item">Spring Boot</li>
+                    <li class="list-group-item">Boostrap</li>
+                    <li class="list-group-item">H2</li>
                   </ul>
                 </div>
               </div>
@@ -59,8 +55,7 @@
                     Temps investi
                   </h6>
                   <ul class="list-group">
-                    <li class="list-group-item">En cours de développement</li>
-                    <li class="list-group-item">Temps estimé 560h</li>
+                    <li class="list-group-item">6 séances de 4h</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
@@ -71,37 +66,27 @@
                     Nombre de personnes impliquées
                   </h6>
                   <p>
-                    4 personnes (chiffre variant entre 1 et 4 suivant la
-                    période)
+                    2 personnes (J'étais principalement front même s'il m'est
+                    arrivé de développer des fonctionalités back)
                   </p>
                 </div>
               </div>
             </div>
-            <div class="confidential-label">Confidentiel</div>
+            <div class="no-confidential-label">Non confidentiel</div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="knowledge-exchange">
-      <h3 class="text-center">Échange de connaissances</h3>
+      <h3 class="text-center">Connaissances acquises</h3>
       <div class="knowledge-exchange-content">
         <p>
-          Mon expérience au sein de cette entreprise m'a permis d'acquérir de
-          précieuses connaissances tant sur le plan technique que sur le plan
-          humain. J'ai pu approfondir mes compétences en programmation, mais
-          j'ai également appris des aspects essentiels du savoir-être et du
-          savoir-vivre en milieu professionnel.
-        </p>
-      </div>
-      <div class="knowledge-exchange-content">
-        <p>
-          En échange, j'ai apporté à l'entreprise des compétences techniques
-          spécifiques, une base solide pour le projet et du code réutilisable.
-          Mon travail de recherche et d'exploration technique a permis d'élargir
-          les possibilités du projet, la réutilisabilité du code et la
-          documentation ont contribué à une meilleure efficacité et à une
-          maintenance simplifiée.
+          J'ai grâce à ce projet renforcé mes connaissances en lien avec
+          l'utilisation du framework Spring Boot. Je me suis assuré d'avoir un
+          code toujours optimisé, des JSP réutilisable à l'aide d'import et un
+          site disponible en plusieurs langues à l'aide de fichier properties
+          proposant une traduction. J'ai aussi amélioré mon utilisation de
+          Boostrap.
         </p>
       </div>
     </div>
@@ -171,12 +156,12 @@ export default {
   margin-bottom: 5px;
 }
 
-.confidential-label {
+.no-confidential-label {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  background-color: #dc3545;
+  background-color: #29a20d;
   color: white;
   font-weight: bold;
   border-radius: 5px;
