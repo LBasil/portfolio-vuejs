@@ -17,9 +17,6 @@
               vous souhaitant une agréable visite et en espérant que vous aurez
               envie de me recontacter !
             </p>
-            <a href="../assets/pdf/CV_L'hôte_Basil.pdf" download
-              >Télécharger mon CV</a
-            >
           </div>
         </div>
         <div class="col-md-6">
