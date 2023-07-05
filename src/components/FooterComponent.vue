@@ -8,8 +8,8 @@
         </div>
         <div class="col-md-6">
           <h3>Contact</h3>
-          <p>Email: contact@monportfolio.com</p>
-          <p>Téléphone: 123-456-7890</p>
+          <p>Email: basil.lhote@gmail.com</p>
+          <p>Téléphone: 06 51 27 91 93</p>
         </div>
       </div>
     </div>

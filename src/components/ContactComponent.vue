@@ -11,7 +11,6 @@
                 type="text"
                 class="form-control custom-input"
                 id="name"
-                v-model="formData.name"
                 required
               />
             </div>
@@ -21,7 +20,6 @@
                 type="email"
                 class="form-control custom-input"
                 id="email"
-                v-model="formData.email"
                 required
               />
             </div>
@@ -31,20 +29,29 @@
                 class="form-control custom-input"
                 id="message"
                 rows="5"
-                v-model="formData.message"
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary custom-button">
+            <button
+              type="submit"
+              class="btn btn-primary custom-button"
+              :disabled="formDisabled"
+            >
               Envoyer
             </button>
           </form>
+          <p class="under-development-message" v-if="formDisabled">
+            Le formulaire est actuellement indisponible, veuillez me contacter
+            par mail.
+          </p>
         </div>
         <div class="col-md-6">
           <h4>Informations de contact</h4>
-          <p><strong>Email:</strong> contact@exemple.com</p>
-          <p><strong>Téléphone:</strong> 123-456-7890</p>
-          <p><strong>Adresse:</strong> 123 rue du Contact, Ville, Pays</p>
+          <p><strong>Email:</strong> basil.lhote@gmail.com</p>
+          <p><strong>Téléphone:</strong> 06 51 27 91 93</p>
+          <p>
+            <strong>Adresse:</strong> 32 rue Allard Dugauquier, Lille, France
+          </p>
           <h4>Suivez-moi sur les réseaux sociaux</h4>
           <div class="social-icons">
             <a href="#" class="social-icon github-icon"
@@ -74,22 +81,20 @@
 </template>
 
 <script lang="ts">
+import { ref } from "vue";
+
 export default {
   name: "ContactComponent",
-  data() {
-    return {
-      formData: {
-        name: "",
-        email: "",
-        message: "",
-      },
+  setup() {
+    const formDisabled = ref(false);
+    const submitForm = () => {
+      // Affiche un message d'avertissement lorsque le formulaire est soumis
+      formDisabled.value = true;
     };
-  },
-  methods: {
-    submitForm() {
-      // Logique pour envoyer le formulaire
-      console.log("Formulaire envoyé !");
-    },
+    return {
+      formDisabled,
+      submitForm,
+    };
   },
 };
 </script>
@@ -120,50 +125,11 @@ export default {
   color: #0e76a8;
 }
 
-.contact-form {
-  animation: fadeIn 0.8s;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.custom-input {
-  border-radius: 8px;
-  border: none;
-  background-color: #eee;
-  padding: 10px;
-  transition: background-color 0.3s;
-}
-
-.custom-input:focus {
-  background-color: #fff;
-}
-
-.custom-button {
-  border-radius: 8px;
-  padding: 12px 24px;
+.under-development-message {
+  text-align: center;
   font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  background-color: #007bff;
-  border: none;
-  transition: background-color 0.3s;
-}
-
-.custom-button:hover {
-  background-color: #0056b3;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  color: red;
+  margin-top: 50px;
 }
 
 /* Ajoutez des styles personnalisés ici */
