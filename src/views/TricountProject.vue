@@ -90,6 +90,98 @@
         </p>
       </div>
     </div>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/accueil_fr.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 1"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/trad.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 2"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/accueil_en.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 3"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/creer_event.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 5"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/event.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 7"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/depense.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 6"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/liste_depense.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 6"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center justify-content-center carousel-image-container"
+          >
+            <img
+              src="../assets/tricount/equilibrage.png"
+              class="d-block img-fluid carousel-image"
+              alt="Image 6"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -97,6 +189,22 @@
 export default {
   mounted() {
     this.animateTitles();
+    const carousel = document.getElementById("carouselExample");
+    let currentIndex = 0;
+    const slides = carousel.querySelectorAll(".carousel-item");
+
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    };
+
+    const nextSlide = () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    };
+
+    setInterval(nextSlide, 3000);
   },
   methods: {
     animateTitles() {
@@ -248,5 +356,16 @@ export default {
 .project-info:hover::after {
   opacity: 1;
   transform: translateX(-50%) scale(1.2);
+}
+
+.carousel-image-container {
+  height: 600px; /* Ajustez la hauteur souhaitée */
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.carousel-image {
+  object-fit: cover;
+  height: 100%;
 }
 </style>
