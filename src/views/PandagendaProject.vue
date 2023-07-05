@@ -337,7 +337,7 @@ export default {
 }
 
 .carousel-image-container {
-  height: 600px; /* Ajustez la hauteur souhaitée */
+  height: 60vh; /* Ajustez la hauteur souhaitée, ici 60% de la hauteur de l'écran */
   margin-bottom: 25px;
   margin-top: 25px;
 }
