@@ -54,10 +54,10 @@
           </p>
           <h4>Suivez-moi sur les réseaux sociaux</h4>
           <div class="social-icons">
-            <a href="#" class="social-icon github-icon"
+            <a href="https://github.com/LBasil/" class="social-icon github-icon"
               ><i class="fab fa-github"></i
             ></a>
-            <a href="#" class="social-icon linkedin-icon"
+            <a href="https://www.linkedin.com/in/basil-l-h%C3%B4te-a653b8213/" class="social-icon linkedin-icon"
               ><i class="fab fa-linkedin"></i
             ></a>
           </div>
